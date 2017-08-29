@@ -1,0 +1,57 @@
+<md-dialog aria-label="Create New Customer" id="new_product" class="create_cust_popup" flex="30">
+    <form ng-cloak>
+        <md-toolbar class="create-cust-toolbar _md _md-toolbar-transitions">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Create New Customer</span>
+                </h2>
+
+                <span flex="" class="flex"></span>
+                <button class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Cancle" ng-click="cancel()">
+                    <i class="material-icons ng-scope">cancel</i>
+                </button>
+                <button class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Done" ng-click="hide()">
+                    <i class="material-icons ng-scope">done</i>
+                </button>
+
+                <button class="md-icon-button md-button md-ink-ripple" type="button" aria-label="More"  ng-click="$mdOpenMenu()">
+                    <i class="material-icons ng-scope">more_vert</i>
+                </button>
+
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <!-- Modal Content Start -->
+            <div class="md-dialog-content create-customer cu-card">
+                <div class="card-content">
+                    <div class="edit-mode">
+                        <md-content class="md-no-momentum"> 
+                            <md-input-container md-no-float class="md-block">
+                                 <label for="first_name">First Name</label>
+                                <md-icon> face </md-icon>
+                                <input id="first_name" name="first_name" type="text">
+                            </md-input-container>
+                            <md-input-container md-no-float class="md-block">
+                                <label for="last_name">Last Name</label>
+                                <md-icon> face </md-icon>
+                                <input id="last_name" name="last_name" type="text">
+                            </md-input-container>
+                            <md-input-container md-no-float class="md-block">
+                                <label for="email">Email</label>
+                                <md-icon> email </md-icon>
+                                <input id="email" name="email" type="email">
+                            </md-input-container>
+                            <md-input-container md-no-float class="md-block">
+                                <label for="phone">Phone</label>
+                                <md-icon> phone </md-icon>
+                                <input id="phone" name="phone" type="tel">
+                            </md-input-container>
+                        </md-content>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Content Start -->
+        </md-dialog-content>
+    </form>
+</md-dialog>

@@ -1,0 +1,50 @@
+<header>       
+    <!-- Header Start -->
+    <div class="header">
+        <div class="app-logo">
+            <span class="mobile-menu" ng-click="toggleLeft()">
+                <md-icon>menu</md-icon>
+            </span>
+            <a href="#/" class="logo">RIYO OFM</a>
+        </div>
+        <div class="container desktop-menu">
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <ul class="left hide-on-med-and-down custom-nav" auto-active>
+                        <li class="dashboard-link"><a href="#/" class="waves-effect waves-light">Dashboard</a></li>
+                        <li><a href="#inventory" class="waves-effect waves-light">Inventory</a></li>
+                        <li><a href="#orders" class="waves-effect waves-light">Orders</a></li>
+                        <li><a href="#integrations" class="waves-effect waves-light">Integrations</a></li>
+                        <li><a href="#customers" class="waves-effect waves-light">Customers</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="usermenu">
+            <a id="usermenu-dropdown" href="#!" data-activates="umenu">YOAV<i class="material-icons right">arrow_drop_down</i></a>
+            <ul id="umenu" class="dropdown-content">
+                <li><a href="#!">My Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Account Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Logout</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <md-sidenav class="md-sidenav-left" id="mobileMenu" 
+                md-whiteframe="4"
+                md-component-id="mobileMenu">
+        <md-content>
+            <ul class="menuLinks" auto-active>
+                <li class="dashboard-link"><md-button class="md-primary" href="#/" ng-click="toggleLeft()">Dashboard</md-button></li>
+                <li><md-button class="md-primary" href="#inventory" ng-click="toggleLeft()">Inventory</md-button></li>
+                <li><md-button class="md-primary waves-effect waves-light" href="#orders" ng-click="toggleLeft()">Orders</md-button></li>
+                <li><md-button class="md-primary waves-effect waves-light" href="#integrations" ng-click="toggleLeft()">Integrations</md-button></li>
+                <li><md-button class="md-primary waves-effect waves-light" href="#customers" ng-click="toggleLeft()">Customers</md-button></li>
+            </ul>
+        </md-content>
+
+    </md-sidenav>
+</header>

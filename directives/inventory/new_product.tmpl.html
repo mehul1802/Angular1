@@ -1,0 +1,259 @@
+<md-dialog aria-label="Submit New Product" id="new_product" class="inventory_popup" flex="70">
+    <form ng-cloak>
+        <md-toolbar class="product-card _md _md-toolbar-transitions">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Submit New Product</span>
+                </h2>
+
+                <span flex="" class="flex"></span>
+                <button class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Cancle" ng-click="cancel()">
+                    <i class="material-icons ng-scope">cancel</i>
+                </button>
+                <button class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Done" ng-click="hide()">
+                    <i class="material-icons ng-scope">done</i>
+                </button>
+
+                <button class="md-icon-button md-button md-ink-ripple" type="button" aria-label="More"  ng-click="$mdOpenMenu()">
+                    <i class="material-icons ng-scope">more_vert</i>
+                </button>
+
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content int-product-new">
+                <div class="product-form-content">
+                    <div class="row add-product-wrap">
+                        <div class="col s12 m12 l4 no-padding">
+                            <div class="product-img">
+                                <img class="responsive-img" src="assets/images/placeholder-thumb.jpg" alt="">
+                            </div>
+                            <div class="image-thumbnails">
+                                <ul>
+                                    <li><img class="responsive-img" src="assets/images/placeholder-thumb.jpg" alt=""></li>
+                                    <li><img class="responsive-img" src="assets/images/placeholder-thumb.jpg" alt=""></li>
+                                    <li class="add-product-image"><i class="material-icons">&#xE145;</i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l8 no-padding">
+                            <div class="row product-details-wrapper">
+                                 <div class="col s12 m6 l6 no-padding">
+                                    <div class="product-details md-inline-form">
+                                        <h3>Product Details</h3>
+                                        <ul>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_20" class="active">Product name:</label>
+                                                <input type="text" value="iPhone screen Protector" class="md-input" id="input_20">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_21" class="active">Manufacturer:</label>
+                                                <input type="text" value="Apple" class="md-input" id="input_21">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li ng-controller="invNewProCategory" ng-cloak>
+                                            <md-input-container class="md-block inven-cat">
+                                                <label>Category</label>
+                                                <md-select ng-model="selectedCatsnewproduct"
+                                                           md-on-close="clearSearchTerm()"
+                                                           data-md-container-class="intSelectHeader"
+                                                           multiple>
+                                                    <md-select-header class="search-select-header">
+                                                        <input ng-model="searchTerm"
+                                                               type="search"
+                                                               placeholder="Search for a Category.."
+                                                               class="demo-header-searchbox md-text">
+                                                    </md-select-header>
+                                                    <md-optgroup label="cats">
+                                                        <md-option ng-value="cat" ng-selected="{{cat == 'All'}}" ng-repeat="cat in cats|
+                                                                     filter:searchTerm">{{cat}}</md-option>
+                                                    </md-optgroup>
+                                                </md-select>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_25" class="active">Color:</label>
+                                                <input type="text" value="Color" class="md-input" id="input_25">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block inven-cat md-input-has-placeholder md-input-has-value">
+                                                <label>Size:</label>
+                                                <md-select ng-model="productsize"  class="">
+                                                    <md-option value="all" ng-selected="true">None</md-option>
+                                                    <md-option value="small">Small</md-option>
+                                                    <md-option value="medium">Medium</md-option>
+                                                    <md-option value="large">Large</md-option>
+                                                </md-select>
+                                            </md-input-container>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l6 no-padding">
+                                  <div class="product-details">
+                                        <h3>Stock</h3>
+                                        <ul>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_31" class="active">On Orders:</label>
+                                                <input type="text" value="2" class="md-input" id="input_31">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_32" class="active">Min Stock:</label>
+                                                <input type="text" value="4" class="md-input" id="input_32">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_33" class="active">In Stock:</label>
+                                                <input type="text" value="0" class="md-input" id="input_33">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block inven-cat md-input-has-placeholder md-input-has-value">
+                                                <label>Status:</label>
+                                                <md-select ng-model="newprodstatus" placeholder="Weapon" class="">
+                                                    <md-option value="axe" ng-selected="true">Axe</md-option>
+                                                    <md-option value="sword">Sword</md-option>
+                                                    <md-option value="wand">Wand</md-option>
+                                                    <md-option value="pen">Pen?</md-option>
+                                                </md-select>
+                                            </md-input-container>
+                                            </li>
+                                            <li ng-controller="invNewProCategory" ng-cloak>
+                                            <md-input-container class="md-block inven-cat">
+                                                <label>Channels</label>
+                                                <md-select ng-model="selectedCats"
+                                                           md-on-close="clearSearchTerm()"
+                                                           data-md-container-class="intSelectHeader"
+                                                           multiple>
+                                                    <md-select-header class="search-select-header">
+                                                        <input ng-model="searchTerm"
+                                                               type="search"
+                                                               placeholder="Search for a Category.."
+                                                               class="demo-header-searchbox md-text">
+                                                    </md-select-header>
+                                                    <md-optgroup label="cats">
+                                                        <md-option ng-value="cat" ng-selected="{{cat == 'All'}}" ng-repeat="cat in cats|
+                                                                     filter:searchTerm">{{cat}}</md-option>
+                                                    </md-optgroup>
+                                                </md-select>
+                                            </md-input-container>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row product-details-wrapper">
+                                <div class="col s12 m6 l6 no-padding">
+                                    <div class="product-details product-dimension">
+                                        <h3>Dimensions</h3>
+                                        <ul>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_26" class="active">Width:</label>
+                                                <input type="text" value="30cm" class="md-input" id="input_26">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_27" class="active">Depth:</label>
+                                                <input type="text" value="50cm" class="md-input" id="input_27">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_28" class="active">Height</label>
+                                                <input type="text" value="25cm" class="md-input" id="input_28">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_29" class="active">Weight</label>
+                                                <input type="text" value="2.5cm" class="md-input" id="input_29">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_30" class="active">Volume:</label>
+                                                <input type="text" value="30ltr" class="md-input" id="input_30">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="col s12 m6 l6 no-padding">
+                                  <div class="product-details product-logistics">
+                                        <h3>RIYO Logistics Warehouse</h3>
+                                        <ul>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_35" class="active">Warehouse location:</label>
+                                                <input type="text" value="D 15 A" class="md-input" id="input_35">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_36" class="active">Sku:</label>
+                                                <input type="text" value="SP 5214963 MLK" class="md-input" id="input_36">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_37" class="active">Barcode:</label>
+                                                <input type="text" value="327469851" class="md-input" id="input_37">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block inven-cat md-input-has-placeholder md-input-has-value">
+                                                <label>Seller:</label>
+                                                <md-select ng-model="newprodseller" placeholder="seller" class="">
+                                                    <md-option value="trade" ng-selected="true">Online trade ltd</md-option>
+                                                    <md-option value="abc">abc trade ltd</md-option>
+                                                    <md-option value="test">test trade ltd</md-option>
+                                                    <md-option value="demo">demo trade ltd</md-option>
+                                                </md-select>
+                                            </md-input-container>
+                                            </li>
+                                            <li>
+                                            <md-input-container class="md-block md-input-has-value">
+                                                <label for="input_39" class="active">Seller ID:</label>
+                                                <input type="text" value="avi00125369" class="md-input" id="input_39">
+                                                <div class="md-errors-spacer"></div>
+                                            </md-input-container>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-dialog-content>
+
+    </form>
+</md-dialog>

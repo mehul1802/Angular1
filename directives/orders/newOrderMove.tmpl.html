@@ -1,0 +1,38 @@
+<div data-id="sidenav_packaging" ng-controller="ordercardmove" ng-click="openSlideNav($event)" ng-repeat="item in moveordercard" class="ng-scope card-wrap" role="button" tabindex="0" >
+    <div class="order-details card-panel bx-shadow" id="package-order-{{item.id}}" style="display:none;">
+        <div class="section">
+            <ul>
+                <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                <li>{{item.channel}} {{item.order_id}}</li>
+                <li><span class="order-name">{{item.customer_name}}</span></li>
+                <li>{{item.customer_add}}</li>
+                <li>{{item.customer_country}}</li>   
+                <li class="order-prod-item">
+                    <span class="order-prod">Product: {{item.products}}</span> 
+                    <span class="order-prod">Quantity: {{item.quantity}}</span>
+                    <span class="order-prod">Weight: {{item.weight}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-id="sidenav_dispatch" ng-controller="ordercardmove" ng-click="openSlideNav($event)" ng-repeat="item in movepackagingordercard" class="ng-scope card-wrap" role="button" tabindex="0">
+    <div class="order-details card-panel bx-shadow" id="dispatch-order-{{item.id}}" style="display:none;">
+        <div class="section">
+            <ul>
+                <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                <li>{{item.channel}} {{item.order_id}}</li>
+                <li><span class="order-name">{{item.customer_name}}</span></li>
+                <li>{{item.customer_add}}</li>
+                <li>{{item.customer_country}}</li>   
+                <li class="order-prod-item">
+                    <span class="order-prod">Product: {{item.products}}</span> 
+                    <span class="order-prod">Quantity: {{item.quantity}}</span>
+                    <span class="order-prod">Weight: {{item.weight}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

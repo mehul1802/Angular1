@@ -1,0 +1,235 @@
+<div class="col s12 m12 neworder-content" ng-controller="ordercardmove">
+    <md-toolbar class="submit-order-card _md _md-toolbar-transitions" id="order-card">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>Submit New Order <br/>201671024</span>
+            </h2>
+            <span flex="" class="flex"></span>                       
+            <md-button data-id="csidenav" class="new-close-button md-icon-button md-button md-ink-ripple"><i class="material-icons">more_vert</i></md-button>
+            <md-button ng-click="closeSlideNav($event)" data-id="csidenav" class="new-close-button md-icon-button md-button md-ink-ripple"><i class="material-icons">cancel</i></md-button>                              
+        </div>
+    </md-toolbar>
+    <md-content>
+        <div class="card order-detail">
+            <div class="card-content">               
+                    <div class="submit-order-detail" content-scroll>
+                        <div class="submit-order-alldetail">
+                           <div class="order-basic-detail">
+                            <div class="row">
+                                <div class="col s4">Recieved</div>
+                                <div class="col s8"><span>12:56 PM 27.8.2016</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">Channel</div>
+                                <div class="col s8 channel-val-drop" ng-controller="newOrderChannelFilter as channel" ng-cloak>
+                                    <md-input-container class="md-block inven-cat">
+                                        
+                                        <md-chips ng-model="channel.selectedChannels" md-autocomplete-snap
+                                                  md-transform-chip="channel.transformChip($chip)"
+                                                  md-require-match="channel.autocompleteDemoRequireMatch">
+                                            <md-autocomplete
+                                                md-selected-item="channel.selectedItem"
+                                                md-search-text="channel.searchText"
+                                                md-items="item in channel.querySearch(channel.searchText)"
+                                                md-item-text="item.name"
+                                                placeholder="Search Channels">
+                                                <span md-highlight-text="channel.searchText">{{item.name}}</span>
+                                            </md-autocomplete>
+
+                                            <md-chip-template>
+                                                <span>{{$chip.name}}</span>
+                                            </md-chip-template>
+                                        </md-chips>
+                                    </md-input-container>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">Seller ID</div>
+                                <div class="col s8"><span>Steve7842941</span></div>
+                            </div>
+                            <div class="row last-row">
+                                <div class="col s4">Order ID</div>
+                                <div class="col s8">
+                                    <input id="order_id" name="order_id" type="text"  value="amz439642">
+                                </div>
+                            </div>
+                        </div>
+                           <div class="customer-detail">
+                            <div class="row">
+                                <div class="col s4">Customer</div>
+                                <div class="col s8">
+                                    <input id="customer_name" name="customer_name" type="text"  value="Mytrie Schmidt">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">Address</div>
+                                <div class="col s8">
+                                    <textarea id="textarea1" class="materialize-textarea">492 Haven Shores Apt Potuino ,638</textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">Country</div>
+                                <div class="col s8">
+                                    <input id="country" name="country" type="text"  value="liechtenstein">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">Email</div>
+                                <div class="col s8">
+                                    <input id="email" name="email" type="text" value="pietro_waeichi@hotmail.com">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s4">Phone</div>
+                                <div class="col s8">
+                                    <input id="phone" name="phone" type="text" value="+44 512-333-0605">
+                                </div>
+                            </div>
+                            <div class="row last-row">
+                                <div class="col s4">Note</div>
+                                <div class="col s8">
+                                    <input id="note" name="note" type="text" value="Leave By the Doorway">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="order-product-search">
+                            <div class="last-row">
+                                <div class="col s12 product-filter-drop" ng-controller="instantSearchCtrl as ctrl" ng-cloak>
+                                    <div class="search-prodtitle">
+                                        <input type="text" class="search-field" placeholder="Search For a Product" ng-model="searchProduct" ng-change="search()" />
+                                        <md-icon class="search-product-icon"> search </md-icon>
+                                        <md-icon class="search-product-close" ng-click="hideSearchResults()"> close </md-icon>
+                                    </div>
+                                    <div class="search-product" ng-controller="orderProductSearch"  style="display: none" >
+                                        <div class="order-product">
+                                            <div class="product-search-result">
+                                                <div class="row search-filter">
+                                                    <div class="new-order-category" new-order-category-filter></div>
+                                                    <div class="new-order-customer" new-order-customer-filter></div>
+                                                </div>
+
+                                                <ul class="all-product" data-collapsible="accordion" >
+                                                    <li class="search-result" ng-repeat="item in filteredList">
+                                                        <div class="collapsible-header">
+                                                            <div class="row search-prod-detail">
+                                                                <div class="col s3 product-image">
+                                                                    <img src="assets/images/order-product.png">
+                                                                </div>
+                                                                <div class="col s8">
+                                                                    <ul class="order-product-desc">
+                                                                        <li class="product-name"><span>{{item.title}}</span></li>
+                                                                        <li>By <span> {{item.by}}</span></li>
+                                                                        <li>In Stock <span> {{item.instock}} </span></li>
+                                                                        <li>Sku <span>{{item.sku}}</span></li>
+                                                                        <li>Barcode <span>{{item.barcode}}</span></li>
+                                                                    </ul>
+
+                                                                </div>
+                                                                <div class="col s1">
+                                                                    <div class="product-link">
+                                                                        <a href="{{item.link.href}}"
+                                                                           title="{{item.link.title}}"
+                                                                           target="_blank">
+                                                                            <i class="material-icons">&#xE895;</i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="collapsible-body">
+                                                            <div class="row">
+                                                                <div class="col s4">&nbsp;</div>
+                                                                <div class="col s8 no-padding">
+                                                                    <ul class="order-product-desc">
+                                                                        <li class="product-options">
+                                                                            <div class="row">
+                                                                                <div class="col s4 no-padding">
+                                                                                    <md-select ng-model="color" placeholder="Color" class="md-no-underline">
+                                                                                        <md-option value="red">Red</md-option>
+                                                                                        <md-option value="blue">Blue</md-option>
+                                                                                        <md-option value="green">Green</md-option>
+                                                                                        <md-option value="yellow">Yellow</md-option>
+                                                                                    </md-select>
+                                                                                </div>    
+                                                                                <div class="col s4 no-padding">
+                                                                                    <md-select ng-model="size" placeholder="Size" class="md-no-underline">
+                                                                                        <md-option value="small">Small</md-option>
+                                                                                        <md-option value="medium">Medium</md-option>
+                                                                                        <md-option value="large">Large</md-option>
+                                                                                    </md-select>
+                                                                                </div>    
+                                                                                <div class="col s4 no-padding">
+                                                                                    <md-select ng-model="qty" placeholder="Quantity" class="md-no-underline">
+                                                                                        <md-option value="1">1</md-option>
+                                                                                        <md-option value="2">2</md-option>
+                                                                                        <md-option value="3">3</md-option>
+                                                                                        <md-option value="4">4</md-option>
+                                                                                    </md-select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="add-product">
+                                                                            <a class="waves-effect waves-light btn">Add</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>                           
+                        </div>
+                        <div class="order-product ordered-items">
+                            <div class="row submit-order-product last-row">
+                                <div class="col s4 product-image">
+                                    <img src="assets/images/order-product.png">
+                                </div>
+                                <div class="col s8">
+                                    <ul class="order-product-desc">
+                                        <li><span class="product-name">MOFRED@ iphone7 [4.7 Inch]<br/>Tempered Glass Protector</span></li>
+                                        <li>By <span> MOFRED</span></li>
+                                        <li>Quantity <span> 2 </span>(31)</li>
+                                        <li>Color <span>Black</span></li>
+                                        <li>Size <span>XL</span></li>                                        
+                                    </ul>
+                                    <ul class="other-info">
+                                        <li>Dimension :<span> w30 d50 h25</span></li>
+                                        <li>Weight :<span> 2.5 Kg</span></li>
+                                        <li>Warehouse locator :<span> D15 A</span></li>
+                                        <li>Sku :<span> 574362195</span></li>
+                                        <li>Barcode :<span> 7638194</span></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class="order-total-detail">
+                        <div class="order-total">
+                            <div class="row">
+                                <div class="col s12">
+                                    <span class="order-span">Total Product <span class="order-count"> 1 </span></span>|
+                                    <span class="order-span">Total Quantity <span class="order-count"> 3 </span></span> |
+                                    <span class="order-span">Total Weight <span class="order-count"> 5kg</span></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="delivering-company">
+                            <div class="row packaging">
+                                <div class="col s12">
+                                    <md-button ng-click="showActionToast()" class="waves-effect waves-light btn submit-orderbtn remov-shadow">Submit Order</md-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>               
+            </div>
+        </div>
+    </md-content>
+</div>
