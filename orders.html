@@ -1,0 +1,162 @@
+<!-- Main Start -->
+<div class="orders-main selector js" id="all-order" ng-controller="ordersCtrl">
+  
+    <a class="black-btn new-sec" ng-click="test()"><i class="material-icons">keyboard_backspace</i></a>
+    <div class="orders-all-detail  main-container flex slides_wrap">
+        <!-- New Orders-->
+        <div class="col s3 order-cards card-new dragend-page page img_slide slide active"  id="slide1" data-role="page"  ng-controller="newOrdersList">
+            <h2 class="sub-title">New  <sub>(5)</sub></h2>
+            <div data-id="sidenav_new_order" ng-click="openSlideNav($event)" ng-repeat="item in newOrders" ng-mouseover="hoverCard($event,true)" ng-mouseout="hoverCard($event,false)" id="new-ordertest" class="card-wrap">
+                <div class="order-details card-panel bx-shadow" id="new-order-{{item.id}}">
+                    <div class="section">
+                        <ul>
+                            <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                            <li>{{item.channel}} {{item.order_id}}</li>
+                            <li><span class="order-name">{{item.customer_name}}</span></li>
+                            <li>{{item.customer_add}}</li>
+                            <li>{{item.customer_country}}</li>   
+                            <li class="order-prod-item">
+                                <span class="order-prod">Product: {{item.products}}</span> 
+                                <span class="order-prod">Quantity: {{item.quantity}}</span>
+                                <span class="order-prod">Weight: {{item.weight}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packaging -->
+        <div class="col s3 order-cards card-packaging dragend-page page img_slide slide" id="slide2" data-role="page" ng-controller="packagingOrdersList">
+            <h2 class="sub-title">Packaging  <sub>(5)</sub></h2>
+            <div class="all-packaing-order">
+                <div data-id="sidenav_packaging" ng-click="openSlideNav($event)" ng-repeat="item in packagingOrders" class="card-wrap">
+                    <div class="order-details card-panel bx-shadow">
+                        <div class="section">
+                            <ul>
+                                <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                                <li>{{item.channel}} {{item.order_id}}</li>
+                                <li><span class="order-name">{{item.customer_name}}</span></li>
+                                <li>{{item.customer_add}}</li>
+                                <li>{{item.customer_country}}</li>   
+                                <li class="order-prod-item">
+                                    <span class="order-prod">Product: {{item.products}}</span> 
+                                    <span class="order-prod">Quantity: {{item.quantity}}</span>
+                                    <span class="order-prod">Weight: {{item.weight}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dispatch -->
+        <div class="col s3 order-cards card-dispatch dragend-page page img_slide slide" id="slide3" data-role="page" ng-controller="dispatchOrdersList">
+            <h2 class="sub-title">Dispatch  <sub>(5)</sub></h2>
+            <div class="all-dispatch-order">
+                <div data-id="sidenav_dispatch" ng-click="openSlideNav($event)" ng-repeat="item in dispatchOrders" class="card-wrap">
+                    <div class="order-details card-panel bx-shadow" id="{{item.id}}">
+                        <div class="section">
+                            <ul>
+                                <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                                <li>{{item.channel}} {{item.order_id}}</li>
+                                <li><span class="order-name">{{item.customer_name}}</span></li>
+                                <li>{{item.customer_add}}</li>
+                                <li>{{item.customer_country}}</li>   
+                                <li class="order-prod-item">
+                                    <span class="order-prod">Product: {{item.products}}</span> 
+                                    <span class="order-prod">Quantity: {{item.quantity}}</span>
+                                    <span class="order-prod">Weight: {{item.weight}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Out of Stock -->
+        <div class="col s3 order-cards card-oos dragend-page page img_slide slide" id="slide4" data-role="page" ng-controller="oosOrdersList">
+            <h2 class="sub-title">Out of Stock <sub>(5)</sub></h2>
+            <div class="all-outofstock-order">
+                <div data-id="sidenav_out_of_stock" ng-click="openSlideNav($event)" ng-repeat="item in ossOrders" class="card-wrap">
+                    <div class="order-details card-panel bx-shadow" id="{{item.id}}">
+                        <div class="section">
+                            <ul>
+                                <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                                <li>{{item.channel}} {{item.order_id}}</li>
+                                <li><span class="order-name">{{item.customer_name}}</span></li>
+                                <li>{{item.customer_add}}</li>
+                                <li>{{item.customer_country}}</li>   
+                                <li class="order-prod-item">
+                                    <span class="order-prod">Product: {{item.products}}</span> 
+                                    <span class="order-prod">Quantity: {{item.quantity}}</span>
+                                    <span class="order-prod">Weight: {{item.weight}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Returns -->
+        <div class="col s3 order-cards card-returns dragend-page page img_slide slide" id="slide5" data-role="page" ng-controller="returnOrdersList">
+            <h2 class="sub-title">Returns  <sub>(5)</sub></h2>
+            <div class="order-details card-panel bx-shadow" ng-repeat="item in returnOrders" class="card-wrap">
+                <div class="section" id="{{item.id}}">
+                    <ul>
+                        <li>O.N {{item.order_number}} <span class="order-date">Jan 2016 05</span></li>
+                        <li>{{item.channel}} {{item.order_id}}</li>
+                        <li><span class="order-name">{{item.customer_name}}</span></li>
+                        <li>{{item.customer_add}}</li>
+                        <li>{{item.customer_country}}</li>   
+                        <li class="order-prod-item">
+                            <span class="order-prod">Product: {{item.products}}</span> 
+                            <span class="order-prod">Quantity: {{item.quantity}}</span>
+                            <span class="order-prod">Weight: {{item.weight}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- button for slide out card for new order !-->
+        <md-button class="md-fab btn-floating btn-large ordercard-open" aria-label="Submit New Order" data-id="sidenav_submit_new_order" ng-click="openSlideNav($event)" ng-cloak>
+            <i class="material-icons">add</i>
+            <md-tooltip md-visible="demo.showTooltip" md-direction="top">
+                Submit New Order
+            </md-tooltip>
+        </md-button>
+
+
+        <!-- model pop up !-->
+
+        <div id="custom-date" class="modal customize-date">
+            <div class="modal-content">
+                <div class="custom-date-picker-dialog-title">
+                    Customised time range
+                </div>
+                <div class="custom-date-picker-dialog-week-content ng-scope _md">                     
+                    <div class="custom-date-picker-dialog-range-from">
+                        <span>From</span>
+                        <md-datepicker ng-model="orderFilterDate" md-placeholder="Enter date"></md-datepicker>
+                    </div>
+                    <div class="custom-date-picker-dialog-range-to">
+                        <span>To</span>
+                        <md-datepicker ng-model="orderFilterDateto" md-placeholder="Enter date"></md-datepicker>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat customize-date-btn">Ok</a>
+                <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat customize-date-btn">Cancel</a>                            
+            </div>
+        </div>
+
+    </div> <!-- Container -->
+</div>
+<!-- Main End -->
+<div order-side-nav></div>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="ofmapp">
+    <head>
+        <meta charset="utf-8">
+        <title>Dashboard - RIYO OFM</title>
+
+        <!-- Metas -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <!-- View Port for responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Import Google Icon Font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Import Angular Material -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        
+        <!-- Import Materialize CSS -->
+        <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+        <!-- Import custom CSS -->
+        <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
+        <!-- Import Respinsive CSS -->
+        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css"/>
+        
+        <!-- Import jQuery Lib -->
+	 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>     
+       
+	
+    </head>
+
+    <body class="app-dashboard" ng-controller="AppCtrl" layout="column" tabIndex="-1" role="main" flex>
+ 
+        <div class="devsite-wrapper">
+            <!-- Header -->
+            <div header></div>
+            
+        </div>
+         <!-- Sub Header Start -->
+        <div class="subheader-wrap">
+                <div subheader></div>
+         </div>
+        <!-- Loading view-->
+        <div class="page-loading" ng-hide="!layout.loading"><md-progress-linear md-mode="indeterminate"></md-progress-linear></div>
+
+        <!-- Main View -->
+    <md-content id="app-main" layout="column" flex inv-content-scroll>
+        <div ng-view id="ui-view"></div>
+    </md-content>
+   
+    <!--Import jQuery before materialize js-->
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <!-- Angular Lib js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    
+
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <script src="assets/js/underscore.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/directives/customers.js"></script>
+    <script src="assets/js/directives/integrations.js"></script>
+    <script src="assets/js/directives/orders.js"></script>
+    <script src="assets/js/directives/inventory.js?id=121"></script>
+    <script src="assets/js/directives/app-details.js"></script>
+    <script src="assets/js/directives/customer-details.js"></script>
+    
+    <script src="assets/js/jquery.event.swipe.js"></script>
+    <script src="http://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+	
+</body>
+</html>
