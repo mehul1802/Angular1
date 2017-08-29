@@ -1,0 +1,20 @@
+
+<md-input-container class="md-block inven-cat">
+                <label>Channels</label>
+                <md-chips ng-model="chips" md-autocomplete-snap
+                          md-transform-chip="channel.transformChip($chip)"
+                          md-require-match="channel.autocompleteDemoRequireMatch">
+                    <md-autocomplete
+                        md-selected-item="channel.selectedItem"
+                        md-search-text="channel.searchText"
+                        md-items="item in channel.querySearch(channel.searchText)"
+                        md-item-text="item.name"
+                        placeholder="Search Channels">
+                        <span md-highlight-text="channel.searchText">{{item.name}}</span>
+                    </md-autocomplete>
+
+                    <md-chip-template>
+                        <span>{{$chip.name}}</span>
+                    </md-chip-template>
+                </md-chips>
+            </md-input-container>

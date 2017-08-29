@@ -1,0 +1,17 @@
+<md-input-container>
+    <label>Customer</label>
+    <md-select ng-model="selectedcustomers"
+               md-on-close="clearSearchTerm()"
+               data-md-container-class="submitordersearchcustomer"
+               multiple placeholder="Customer">
+        <md-select-header class="search-select-header">
+            <input ng-model="searchTerm"
+                   type="search"
+                   placeholder="Search for a Customers.."
+                   class="demo-header-searchbox md-text" force-select-focus>
+        </md-select-header>
+        <md-optgroup label="Customers" default-option="All">
+            <md-option  ng-value="customer" ng-repeat="customer in customers|filter:searchTerm">{{customer}}</md-option>
+        </md-optgroup>
+    </md-select>
+</md-input-container>

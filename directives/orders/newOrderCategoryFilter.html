@@ -1,0 +1,17 @@
+<md-input-container>
+    <label>Category</label>
+    <md-select ng-model="selectedcategories"
+               md-on-close="clearSearchTerm()"
+               data-md-container-class="submitordersearchcategoty"
+               multiple placeholder="Category">
+        <md-select-header class="search-select-header">
+            <input ng-model="searchTerm"
+                   type="search"
+                   placeholder="Search for a Category.."
+                   class="demo-header-searchbox md-text" force-select-focus>
+        </md-select-header>
+        <md-optgroup label="cardcategories" default-option="All">
+            <md-option ng-value="category" ng-repeat="category in cardcategories|filter:searchTerm">{{category}}</md-option>
+        </md-optgroup>
+    </md-select>
+</md-input-container>
