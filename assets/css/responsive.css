@@ -1,0 +1,259 @@
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1280px){
+	.ofmapp-container{
+		width:100%;
+	}
+}
+@media only screen and (min-width : 1200px) and (max-width : 1300px) {
+	.sub-header-filter li{
+		padding-right: 60px;
+	}
+}
+
+@media only screen and (max-width : 1280px) {
+	.sub-header-filter li{
+		padding-right: 40px;
+	}
+	.ofmapp-container {
+		width:95%;
+	}
+}
+@media only screen and (max-width : 1059px) {
+	.sub-header-filter li{
+		padding-right: 5%;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.card.horizontal{
+		display: table;
+	}
+	.horizontal.inventaro-head{
+		width: 100%;
+	}
+	.order-performance h6{
+		line-height: inherit;
+	}	
+	.mobile-menu{
+		display: inline-block;
+	}
+	.desktop-menu{
+		display: none;
+	}
+	.financial{
+		margin-top: 30px;
+	}
+	.sub-header .black-btn{
+		display: inline-block;
+		position: relative;
+		left: -5px;
+		top: 13px;
+		float: left;
+	}
+	.collapsible-body .product-details, .inventory_popup .product-details {
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.product-img,.image-thumbnails {
+		margin: 0 auto;
+        display: table;
+	}
+	.product-details-wrapper {
+		padding-top:15px;
+	}
+	 .collapsible .card .card-content {
+	  padding:20px;
+    }
+	md-toolbar {
+		min-height: 64px;
+	}
+	.md-toolbar-tools {
+		max-height: 64px;
+		height:64px;
+	}
+	.inv-hide-md{
+		display: none;
+	}
+	.cust-hide-md{
+		display: none;
+	}
+	.inv-show-md {
+	  display:block;
+    }
+	.product-list h2 {
+		line-height: 30px;
+	}
+	
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.sub-header-filter li {
+		padding-right:28px;
+	}
+	
+}
+
+@media only screen and (max-width : 600px) {
+	.card.cu-card.Large{
+		margin: 0.5rem 0 1rem 0;
+	}
+    .collapsible-body .product-details, .inventory_popup .product-details {
+		padding-left:0px;
+	}
+	.product-img,.image-thumbnails {
+		margin: 0 auto;
+        display: table;
+	}
+	.product-details-wrapper {
+		padding-top:20px;
+	}
+	.stock-detail {
+		margin-top:20px;
+	}
+	 .stock-collection .product-details h3, .inventory_popup .product-details h3 {
+	  font-size:20px;
+    }
+	 .collapsible .card .card-content {
+	  padding:20px;
+    }
+	.product-details-wrapper .product-dimension{
+		padding-top:0px;
+	}
+	.collapsible-body .product-details, .inventory_popup .product-details {
+		padding-right:0px;
+	}
+	.product-details ul {
+		    margin-bottom: 0px;
+	}
+	.inv-hide-sm{
+		display: none;
+	}
+	.cust-hide-sm{
+		display: none;
+	}
+	.inv-show-md {
+	  display:block;
+    }
+	.inv-show-sku{
+	   display:block;
+    }
+	.product-list h2{
+		line-height:15px;
+	}
+	.invt-sku {
+	   padding-top: 8px;
+       padding-bottom: 8px;
+	}
+	.product-list h2, .customer-list h2 {
+		font-size:15px;
+	}
+	
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px){
+
+
+   .product-list h2{
+		line-height:20px;
+	}
+	.stock-collection li .collapsible-header, .inventory_popup li .collapsible-header {
+		height:auto;
+	}
+	.min-stock {
+		float:none;
+	}
+	.on-order {
+		float:none;
+		padding-left:0px;
+		padding-top: 5px;
+	}
+	.orders-main .card-new, .orders-main .card-packaging, .orders-main .card-dispatch, .orders-main .card-oos, .orders-main .card-returns {
+		padding-left: 40px !important;
+		padding-right: 40px !important;	
+	}
+	.orders-main .orders-all-detail {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.order-details .order-prod {
+		font-size:15px;
+	}
+	.md-sidenav-right {
+		min-width:100%;
+	}
+
+	.new-sec {
+	 display:none;
+    }
+	/*.js .slide.active ~ .slide{left:100%}*/
+	.pane{position:relative}
+	.content{position:relative}
+	.slide{display:inline-block;vertical-align:top;position:relative;width:100%;margin-right:-100% !important}
+	.js .slide{left:-100%;height:0;overflow-x:visible;z-index:1;-webkit-transition-property:left,height;-moz-transition-property:left,height;-ms-transition-property:left,height;-o-transition-property:left,height;transition-property:left,height;-webkit-transition-duration:333ms;-moz-transition-duration:333ms;-ms-transition-duration:333ms;-o-transition-duration:333ms;transition-duration:333ms;-webkit-transition-timing-function:cubic-bezier(0.1,0.7,0.7,1);-moz-transition-timing-function:cubic-bezier(0.1,0.7,0.7,1);-ms-transition-timing-function:cubic-bezier(0.1,0.7,0.7,1);-o-transition-timing-function:cubic-bezier(0.1,0.7,0.7,1);transition-timing-function:cubic-bezier(0.1,0.7,0.7,1);-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+	.js .slide.active{left:0;height:auto;overflow:visible;z-index:2}
+	.js .slide.active ~ .slide.active{left:0}
+	
+	.invt-sku {
+	   padding-top: 5px;
+       padding-bottom: 5px;
+	}
+	.stock-collection .collapsible-header{
+		padding:10px 5px;
+	}
+	.inventory-main .inventory-card {
+		padding: 0px 5px;
+		/* margin: 0 auto; */
+	}
+	.product-list h2, .customer-list h2 {
+		font-size:14px;
+	}
+	.sub-header-filter li {
+		padding-right:40px;
+	}
+	
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 400px) {
+  .stock-collection .product-details h3, .inventory_popup .product-details h3 {
+	  font-size:20px;
+  }
+  .customer-title .md-button.md-icon-button {
+		padding:0px;
+		padding-top:10px;
+  }
+  .sub-header .page-title {
+	  font-size:23px;
+  }
+}
+
+@media only screen and (min-width : 590px) and (max-width : 750px) {
+  .stock-collection .product-details h3, .inventory_popup .product-details h3 {
+	  font-size:20px;
+  }
+  .apps-store .company-details .card-content {
+	  height:240px;
+  }
+}
+@media only screen and (min-width : 990px) and (max-width : 1250px) {
+  .stock-collection .product-details h3, .inventory_popup .product-details h3 {
+	  font-size:14px;
+  }
+  .ofm-option {
+      min-height: 160px;
+  }
+  .apps-store .company-details .card-content {
+	  height:240px;
+  }
+}
+
+@media only screen and (min-width :1168px) and (max-width : 1490px) {
+  .stock-collection .product-details h3, .inventory_popup .product-details h3 {
+	  font-size:18px;
+  } 
+}
+
+
