@@ -1,0 +1,100 @@
+<!-- Main Start -->
+<div class="customers-main main-container" ng-controller="custCtrl">
+    <div class="container ofmapp-container">
+        <!-- Your Customers -->
+        <div class="customer-list-heading">
+            <h3 class="sub-title">Your Customers <sub>(4)</sub></h3>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="card horizontal inventaro-head Large customer-card bx-shadow">
+                    <div class="invt-details col s5 m3 l2 card-content">
+                        <div class="section stock-head">
+                            <h6>Name</h6>
+                        </div>
+                    </div>
+                    <div class="invt-details col s2 card-content cust-hide-md">
+                        <div class="section stock-head">
+                            <h6>Phone</h6>
+                        </div>
+                    </div>
+                    <div class="invt-details col m5 l4 card-content cust-hide-sm">
+                        <div class="section stock-head">
+                            <h6>Email</h6>
+                        </div>
+                    </div>
+
+                    <div class="invt-details col s1 card-content cust-hide-md">
+                        <div class="section stock-head">
+                            <h6>SLA</h6>
+                        </div>
+                    </div>
+                    <div class="invt-details col s4 m2 card-content">
+                        <div class="section stock-head">
+                            <h6>Balance</h6>
+                        </div>
+                    </div>
+                    <div class="invt-details col s2 m1 card-content">
+                        <div class="section stock-head">
+                            <h6>Status</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stock-collection" ng-controller="customersList">
+            <ul class="collection bx-shadow">
+                <li class="collection-item customer-data" ng-repeat="customer in customers">
+                    <a href="#customer-details">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="horizontal Large">
+                                    <div class="customer-list col s5 m3 l2">
+                                        <div class="section">                                                                
+                                            <h2>{{customer.name}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="customer-list col s2 cust-hide-md">
+                                        <div class="section">
+                                            <h2>{{customer.phone}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="customer-list col m5 l4 cust-hide-sm">
+                                        <div class="section">
+                                            <h2>{{customer.email}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="customer-list col s1 cust-hide-md">
+                                        <div class="section">
+                                            <h2>{{customer.sla}}</h2>
+                                        </div>
+                                    </div>
+                                    <div class="customer-list col s4 m2">
+                                        <div class="section">
+                                            <h2><span>{{customer.balance | currency:"&pound;" }}</span></h2>
+                                        </div>
+                                    </div>
+                                    <div class="customer-list col s2 m1">
+                                        <div class="section">
+                                            <h2>{{customer.status}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+         <!-- button for slide out card for new order !-->
+    <md-button class="md-fab btn-floating btn-large ordercard-open" aria-label="Submit New Order" data-id="sidenav_submit_new_order" ng-click="custNewCustomer($event)" ng-cloak>
+        <i class="material-icons">add</i>
+        <md-tooltip md-visible="demo.showTooltip" md-direction="top">
+            Create New Customer
+        </md-tooltip>
+    </md-button>
+        
+</div>
+<!-- Main End -->

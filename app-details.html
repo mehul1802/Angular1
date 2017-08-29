@@ -1,0 +1,167 @@
+<!-- Sub Header Start -->
+<div class="sub-header dark">
+    <div class="container ofmapp-container">
+        <div class="row">
+            <div class="col s12 m12 l8 offset-l2 title-wrapper" ng-controller="appDetails">
+                <a href="#integrations" class="black-btn"><i class="material-icons">keyboard_backspace</i></a>
+                <h1 class="page-title">{{app.app_name}}</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Sub Header End -->
+
+<!-- Main Start -->
+<div class="intergrations-main main-container" ng-controller="appDetails">
+    <div class="container ofmapp-container">
+        <!-- Active APP Start -->
+        <div class="row apps-active">
+            <div class="col s12 m12 l8 offset-l2">
+                <div class="card company-details cu-card bx-shadow">
+                    <div class="card-content">
+                        <ul class="collection with-header">
+                            <li class="collection-item">
+                                <div class="row row-nopadding">
+                                    <div class="col s3"><img src="assets/images/amazon.jpg" alt="ebay" width="120"/></div>
+                                    <div class="col s6">
+                                        <div class="company-name">
+                                            <h4>{{app.app_name}}</h4>
+                                            <span>{{app.app_details}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col s3 company-desc">
+                                        <div class="switch">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collection-item"><span class="app-last-activity">Last Activity: {{app.last_activity}}</span></li>
+                            <li class="collection-item" id="infocol1">
+                                <div class="view-mode">
+                                    <i class="material-icons editAppDetails-icon">mode_edit</i>
+                                    <div class="row">
+                                        <div class="col s3">RIYO Name :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.riyo_name}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Amazon Name:</div>
+                                        <div class="col s8"><span class="item-detail">{{app.amazon_name}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Seller ID :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.seller_id}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Amazon URL :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.amazon_url}}</span></div>
+
+                                    </div>
+                                </div> 
+                                <div class="edit-mode">
+                                    <i class="material-icons updateAppDetails-icon">&#xE876;</i>
+                                    <div class="row">
+                                        <div class="col s3">RIYO Name :</div>
+                                        <div class="col s8"><input id="riyo_name" name="riyo_name" type="text"  value="{{app.riyo_name}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Amazon Name:</div>
+                                        <div class="col s8"><input id="amazon_name" name="amazon_name" type="text"  value="{{app.amazon_name}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Seller ID :</div>
+                                        <div class="col s8"><input id="seller_id" name="seller_id" type="text"  value="{{app.seller_id}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Amazon URL :</div>
+                                        <div class="col s8"><input id="amazon_url" name="amazon_url" type="text"  value="{{app.amazon_url}}"></span></div>
+
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="collection-item" id="infocol2">
+                                <div class="view-mode">
+                                    <i class="material-icons editAppDetails-icon">mode_edit</i>
+                                    <div class="row">
+                                        <div class="col s3">API Key :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.api_key}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Password :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.password}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Shared Secret :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.shared_secret}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Tag :</div>
+                                        <div class="col s8"><span class="item-detail">{{app.tag}}</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="edit-mode">
+                                    <i class="material-icons updateAppDetails-icon">&#xE876;</i>
+                                    <div class="row">
+                                        <div class="col s3">API Key :</div>
+                                        <div class="col s8"><input id="key" name="key" type="text"  value="{{app.api_key}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Password :</div>
+                                        <div class="col s8"><input id="password" name="password" type="text"  value="{{app.password}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Shared Secret :</div>
+                                        <div class="col s8"><input id="shared_secret" name="shared_secret" type="text"  value="{{app.shared_secret}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s3">Tag :</div>
+                                        <div class="col s8"><input id="tag" name="tag" type="text"  value="{{app.tag}}"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collection-item" id="infocol3">
+                                <div class="view-mode">
+                                    <i class="material-icons editAppDetails-icon">mode_edit</i>
+                                    <div class="row">
+                                        <div class="col s3">Update Stock</div>
+                                        <div class="col s8">
+                                            <md-radio-group ng-model="data.group1">
+                                                <md-radio-button value="1" class="md-primary" ng-selected="true" ng-disabled="true"><span class="item-detail">Don't Sync</span></md-radio-button>
+                                                <md-radio-button value="2" ng-disabled="true"><span class="item-detail"> Sync OFM the Amazon </span></md-radio-button>
+                                                <md-radio-button value="3" ng-disabled="true"><span class="item-detail">Sync Amazon to OFM </span></md-radio-button>
+                                            </md-radio-group>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="edit-mode">
+                                    <i class="material-icons updateAppDetails-icon">&#xE876;</i>
+                                    <div class="row">
+                                        <div class="col s3">Update Stock</div>
+                                        <div class="col s8">
+                                            <md-radio-group ng-model="data.group1">
+                                                <md-radio-button value="1" class="md-primary"><span class="item-detail">Don't Sync</span></md-radio-button>
+                                                <md-radio-button value="2"><span class="item-detail"> Sync OFM the Amazon </span></md-radio-button>
+                                                <md-radio-button value="3"><span class="item-detail">Sync Amazon to OFM </span></md-radio-button>
+                                            </md-radio-group>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Active APP End -->
+
+    </div> <!-- Container End -->
+</div>
+<!-- Main End -->

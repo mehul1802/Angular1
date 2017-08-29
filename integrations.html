@@ -1,0 +1,58 @@
+<!-- Main Start -->
+<div class="intergrations-main main-container">
+    <div class="container ofmapp-container">
+        <!-- Active APP Start -->
+        <div class="row active-apps" ng-controller="activeAppsList">
+            <div class="col s12 sub-heading">
+                <h2 class="no-top-margin sub-title">Active Apps <sub>(4)</sub></h2>
+            </div>
+            <div class="col s12 m6 l4" ng-repeat="app in activeApps">
+                <div class="card company-details cu-card bx-shadow">
+                    <div class="center card-content">
+                        <div class="int-channel-logo">
+                            <a href="#app-details"><img src="{{ app.image }}" alt="amazon" width="150"/></a>
+                        </div>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                        <span class="int-last-activity">Last Activity: {{app.last_activity}}</span>
+                        <div class="int-details">
+                            <span>{{app.link}}</span>
+                            <span>Customer: {{app.customer}}</span>
+                            <span>Channel: {{app.channel}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Active APP End -->
+
+        <!-- APP Store Start -->
+        <div class="row apps-store" ng-controller="inActiveAppsList">
+            <div class="col s12 sub-heading">
+                <h2 class="sub-title">Apps Store <sub>(4)</sub></h2>
+            </div>
+            <div class="col s12 m4 l3" ng-repeat="app in inActiveApps">
+                <div class="card company-details cu-card bx-shadow">
+                    <div class="center card-content">
+                        <div class="int-channel-logo">
+                            <img src="{{ app.image }}" alt="" width="100" height="100" />
+                        </div>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" checked="checked">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                        <div class="int-details">{{app.name}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- APP Store End -->
+    </div> <!-- Container End -->
+</div>
+<!-- Main End -->

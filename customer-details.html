@@ -1,0 +1,345 @@
+<!-- Sub Header Start -->
+<div class="sub-header dark">
+    <div class="container ofmapp-container">
+
+        <div class="row customer-title" ng-controller="customerDetails">
+            <div class="col s8 title-wrapper">
+                <a href="#customers" class="black-btn"><i class="material-icons">keyboard_backspace</i></a>
+                <h1 class="page-title">{{cDetails.company_name}}</h1>
+            </div>
+            <div class="col s4">
+                <md-toolbar class="_md-toolbar-transitions subheader-buttons">
+                    <div class="md-toolbar-tools">
+                        <span flex="" class="flex"></span>
+                        <a href="#customers" class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Cancle">
+                            <i class="material-icons ng-scope">cancel</i>
+                        </a>
+                        <a href="#customers" class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Cancle">
+                            <i class="material-icons ng-scope">done</i>
+                        </a>
+                        <a href="" class="md-icon-button md-button md-ink-ripple modal-close" type="button" aria-label="Cancle">
+                            <i class="material-icons ng-scope">more_vert</i>
+                        </a> 
+                    </div>
+                </md-toolbar>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Sub Header End -->
+<!-- Main Start -->
+<div class="intergrations-main main-container" ng-controller="customerDetails">
+    <div class="container ofmapp-container">
+        <!-- Active APP Start -->
+        <div class="row customer-active" >
+            <div class="col s12 m12 l7">
+                <div class="card customer-details cu-card bx-shadow">
+                    <div class="card-content">
+                        <ul class="collection with-header">
+                            <li class="collection-item">
+                                <div class="row row-nopadding">                                       
+                                    <div class="col s9">
+                                        <div class="company-name">
+                                            <h4>{{cDetails.company_name}}</h4>
+                                            <span class="since-title">{{cDetails.active_log}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col s3 company-desc">
+                                        <div class="switch">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="lever"></span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="collection-item">
+                                <div class="view-mode">
+                                    <i class="material-icons editCustDetails-icon">mode_edit</i>
+                                    <div class="row">
+                                        <div class="col s4">Company Name </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.company_name}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Reg No.</div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.reg_no}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">First Name </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.first_name}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Last Name </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.last_name}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Email </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.email}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Phone </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.phone}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Mobile </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.mobile}}</span></div>
+                                    </div>
+                                    <div class="row last-row">
+                                        <div class="col s4">Website </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.website}}</span></div>
+                                    </div>
+                                </div>
+                                <div class="edit-mode">
+                                    <i class="material-icons updateCustDetails-icon">&#xE876;</i>
+                                    <div class="row">
+                                        <div class="col s4">Company Name </div>
+                                        <div class="col s7"><input id="company_name" name="company_name" type="text"  value="{{cDetails.company_name}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Reg No.</div>
+                                        <div class="col s7"><input id="reg_no" name="reg_no" type="text"  value="{{cDetails.reg_no}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">First Name </div>
+                                        <div class="col s7"><input id="first_name" name="first_name" type="text"  value="{{cDetails.first_name}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Last Name </div>
+                                        <div class="col s7"><input id="last_name" name="last_name" type="text"  value="{{cDetails.last_name}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Email </div>
+                                        <div class="col s7"><input id="email" name="email" type="text"  value="{{cDetails.email}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Phone </div>
+                                        <div class="col s7"><input id="phone" name="phone" type="text"  value="{{cDetails.phone}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Mobile </div>
+                                        <div class="col s7"><input id="mobile" name="mobile" type="text"  value="{{cDetails.mobile}}"></div>
+                                    </div>
+                                    <div class="row last-row">
+                                        <div class="col s4">Website </div>
+                                        <div class="col s7"><input id="website" name="website" type="text"  value="{{cDetails.website}}"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div class="view-mode">
+                                    <i class="material-icons editCustDetails-icon">mode_edit</i>
+                                    <div class="row">
+                                        <div class="col s4">Address </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.address}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">City </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.city}}</span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Country </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.country}}</span></div>
+                                    </div>
+                                    <div class="row last-row">
+                                        <div class="col s4">Postal Code </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.postal_code}}</span></div>
+                                    </div>
+                                </div>
+                                <div class="edit-mode">
+                                    <i class="material-icons updateCustDetails-icon">&#xE876;</i>
+                                    <div class="row">
+                                        <div class="col s4">Address </div>
+                                        <div class="col s7"><input id="address" name="address" type="text"  value="{{cDetails.address}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">City </div>
+                                        <div class="col s7"><input id="city" name="city" type="text"  value="{{cDetails.city}}"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">Country </div>
+                                        <div class="col s7"><input id="country" name="country" type="text"  value="{{cDetails.country}}"></div>
+                                    </div>
+                                    <div class="row last-row">
+                                        <div class="col s4">Postal Code </div>
+                                        <div class="col s7"><input id="postal_code" name="postal_code" type="text"  value="{{cDetails.postal_code}}"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div class="view-mode">
+                                    <i class="material-icons editCustDetails-icon">mode_edit</i>
+                                    <div class="row">
+                                        <div class="col s4">Nature Of Trade </div>
+                                        <div class="col s7"><span class="item-detail">{{cDetails.nature_Of_trade}}</span></div>
+                                    </div>
+                                    <div class="row last-row">
+                                        <div class="col s4">Contract Level </div>
+                                        <div class="col s7">
+                                            <span class="item-detail">{{cDetails.contract_level}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="edit-mode">
+                                    <i class="material-icons updateCustDetails-icon">&#xE876;</i>
+                                    <div class="row">
+                                        <div class="col s4">Nature Of Trade </div>
+                                        <div class="col s7"><input id="nature_of_trade" name="nature_of_trade" type="text"  value="{{cDetails.nature_Of_trade}}"></div>
+                                    </div>
+                                    <div class="row last-row">
+                                        <div class="col s4">Contract Level </div>
+                                        <div class="col s7">
+                                            <span class="item-detail"><input id="contract_level" name="contract_level" type="text"  value="{{cDetails.contract_level}}"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collection-item">                                                                                                  <div class="row user-info last-row">
+                                    <div class="col s12">
+                                        <table class="customer-table">
+                                            <thead>
+                                                <tr>
+                                                    <th data-field="id">Users</th>
+                                                    <th data-field="name">Name</th>
+                                                    <th data-field="password">Password</th>
+                                                    <th data-field="password">Last Activity</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="assets/images/yuna.jpg" alt="" class="circle"></td>
+                                                    <td>Mittie</td>
+                                                    <td>*******5</td>
+                                                    <td>20 Min Ago</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="assets/images/yuna.jpg" alt="" class="circle"></td>
+                                                    <td>Ben</td>
+                                                    <td>*******5</td>
+                                                    <td>Yesterday</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l5 financial">
+                <md-toolbar class="finance-card _md _md-toolbar-transitions">
+                    <div class="md-toolbar-tools">
+                        <h2>
+                            <span>Financial</span>
+                        </h2>
+                        <span flex="" class="flex"></span>
+
+                    </div>
+                </md-toolbar>
+                <div class="card finance-detail bx-shadow">
+                    <div class="card-content">
+                        <div class="finance-basic-detail">
+                            <div class="row">
+                                <div class="col s6">Payment Method</div>
+                                <div class="col s6"><span>Visa</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">Terms</div>
+                                <div class="col s6"><span>30 Days</span></div>
+                            </div>
+                            <div class="row last-row">
+                                <div class="col s6">Price Plan</div>
+                                <div class="col s6"><span>A 2016</span></div>
+                            </div>
+                        </div>
+                        <div class="finance-basic-detail">
+                            <div class="row finance-table">
+                                <div class="col s12">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th data-field="id">Date</th>
+                                                <th data-field="name">Type</th>
+                                                <th data-field="password">Number</th>
+                                                <th data-field="password">Amount</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>invoice</td>
+                                                <td>20154987</td>
+                                                <td>-&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>Payment</td>
+                                                <td>20154987</td>
+                                                <td>&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>invoice</td>
+                                                <td>20154987</td>
+                                                <td>-&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>Payment</td>
+                                                <td>20154987</td>
+                                                <td>&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>invoice</td>
+                                                <td>20154987</td>
+                                                <td>-&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>Payment</td>
+                                                <td>20154987</td>
+                                                <td>&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>invoice</td>
+                                                <td>20154987</td>
+                                                <td>-&pound;560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.2.2016</td>
+                                                <td>Payment</td>
+                                                <td>20154987</td>
+                                                <td>&pound;560</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>                               
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="total-amount">
+                            <div class="row last-row">
+                                <div class="col s6">
+                                    <span class="balance-text">Balance</span>
+                                </div>
+                                <div class="col s6">
+                                    <span class="total-payment">-&pound;2640.67</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Active APP End -->
+    </div><!-- Container End -->
+</div><!-- Main End -->
