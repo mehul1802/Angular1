@@ -1,0 +1,21 @@
+{
+    "error": 0,
+    "message": "Customer details",
+    "data": [{
+            "active_log": "Active since 15.4.2017",
+            "company_name": "Eltundra Trade LTD.",
+            "reg_no": "DK9999999",
+            "first_name": "Mittie",
+            "last_name": "Clyton",
+            "email": "mittie@Eltundra.co.uk",
+            "phone": "+44 20 653 2548",
+            "mobile": "+44 78 5684 2341",
+            "website": "www.eltundra.co.uk",
+            "address": "******26",
+            "city": "*******",
+            "country": "********",
+            "postal_code": "hyuofm87juys925",
+            "nature_Of_trade": "Cosmtics Products",
+            "contract_level": "A - fulfilment + Hard Packaging"
+        }]
+}
