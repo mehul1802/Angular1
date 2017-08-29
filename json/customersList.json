@@ -1,0 +1,47 @@
+{
+    "error": 0,
+    "message": "Customers",
+    "data": [{
+            "name": "Mittie Clyton",
+            "phone": "535-011-7885",
+            "email": "abshire_jarn@doris.name",
+            "sla": "A",
+            "balance": "2360.24",
+            "status": "Active"
+        }, {
+            "name": "Mittie Clyton",
+            "phone": "535-011-7885",
+            "email": "abshire_jarn@doris.name",
+            "sla": "B",
+            "balance": "2160.24",
+            "status": "Active"
+        }, {
+            "name": "Mittie Clyton",
+            "phone": "535-011-7885",
+            "email": "abshire_jarn@doris.name",
+            "sla": "B",
+            "balance": "3360.24",
+            "status": "Active"
+        }, {
+            "name": "Mittie Clyton",
+            "phone": "535-011-7885",
+            "email": "abshire_jarn@doris.name",
+            "sla": "A",
+            "balance": "6560.24",
+            "status": "Inactive"
+        }, {
+            "name": "Mittie Clyton",
+            "phone": "535-011-7885",
+            "email": "abshire_jarn@doris.name",
+            "sla": "B",
+            "balance": "2380.24",
+            "status": "Active"
+        }, {
+            "name": "Mittie Clyton",
+            "phone": "535-011-7885",
+            "email": "abshire_jarn@doris.name",
+            "sla": "B",
+            "balance": "2360.24",
+            "status": "Active"
+        }]
+}

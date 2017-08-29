@@ -1,0 +1,53 @@
+{
+    "error": 0,
+    "message": "apps",
+    "data": [{
+            "app_url": "#app-details",
+            "image": "assets/images/amazon.png",
+            "status": "1",
+            "last_activity": "Today 14.39",
+            "link": "amazon.com/sguonline",
+            "customer": "Stev Rob",
+            "channel": "Amazonstevr"
+        }, {
+            "app_url": "#app-details",
+            "image": "assets/images/shopify.jpg",
+            "status": "1",
+            "last_activity": "Today 14.39",
+            "link": "ofirbarck.com",
+            "customer": "Ofir Barck LRTD",
+            "channel": "ofirShopify"
+        }, {
+            "app_url": "#app-details",
+            "image": "assets/images/ebay.png",
+            "status": "1",
+            "last_activity": "Today 14.39",
+            "link": "ebay.com/ofirbarckltd",
+            "customer": "Ofir Barck LRTD",
+            "channel": "ebayofir"
+        }, {
+            "app_url": "#app-details",
+            "image": "assets/images/ebay.png",
+            "status": "1",
+            "last_activity": "Today 14.39",
+            "link": "ofirbarck.com",
+            "customer": "Ofir Barck LRTD",
+            "channel": "ofirShopify"
+        }, {
+            "app_url": "#app-details",
+            "image": "assets/images/amazon.png",
+            "status": "1",
+            "last_activity": "Today 14.39",
+            "link": "ebay.com/ofirbarckltd",
+            "customer": "Ofir Barck LRTD",
+            "channel": "ebayofir"
+        }, {
+            "app_url": "#app-details",
+            "image": "assets/images/amazon.png",
+            "status": "1",
+            "last_activity": "Today 14.39",
+            "link": "amazon.com/sguonline",
+            "customer": "Stev Rob",
+            "channel": "Amazonstevr"
+        }]
+}

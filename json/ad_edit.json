@@ -1,0 +1,18 @@
+{
+    "error": 0,
+    "message": "Customer details",
+    "data": [{
+            "app_name": "Amazon",
+            "app_details": "Amazon is most popular marketplace.",
+            "last_activity": "Today 14:39",
+            "riyo_name": "Steve Rob",
+            "amazon_name": "sgu online",
+            "seller_id": "A2DDQC84LG5MKH",
+            "amazon_url": "amazon.co.uk/shops/A2DDQC84LG5MKH",
+            "api_key": "******26",
+            "password": "*******",
+            "shared_secret": "********",
+            "tag": "hyuofm87juys925",
+            "upload_stock": "1"
+        }]
+}

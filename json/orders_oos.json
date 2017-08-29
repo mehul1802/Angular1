@@ -1,0 +1,29 @@
+{
+    "error": 0,
+    "message": "Customers",
+    "data": [{
+            "id":"1",
+            "order_number": "201661035",
+            "order_date": "Jan 2016 05",
+            "channel": "Amazon Shukly",
+            "order_id": "amz439642",
+            "customer_name": "Mytrie Schmidt",
+            "customer_add": "492 Haven Shores Apt. 638",
+            "customer_country": "Liechtenstein",
+            "products": "2",
+            "quantity": "3",
+            "weight": "5kg"
+        }, {
+            "id":"2",
+            "order_number": "201661035",
+            "order_date": "Jan 2016 05",
+            "channel": "Amazon Shukly",
+            "order_id": "amz439642",
+            "customer_name": "Mytrie Schmidt",
+            "customer_add": "492 Haven Shores Apt. 638",
+            "customer_country": "Liechtenstein",
+            "products": "2",
+            "quantity": "3",
+            "weight": "5kg"
+        }]
+}
